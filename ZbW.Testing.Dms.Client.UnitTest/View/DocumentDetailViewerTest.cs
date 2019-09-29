@@ -1,6 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
+using ZbW.Testing.Dms.Client.Repositories;
+using ZbW.Testing.Dms.Client.ViewModels;
 using ZbW.Testing.Dms.Client.Views;
 
 namespace ZbW.Testing.Dms.Client.UnitTest

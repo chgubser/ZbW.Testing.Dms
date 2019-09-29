@@ -1,14 +1,17 @@
-﻿namespace ZbW.Testing.Dms.Client.ViewModels
+﻿using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Windows;
+using ZbW.Testing.Dms.Client.Model;
+using ZbW.Testing.Dms.Client.Services;
+using Microsoft.Win32;
+using Prism.Commands;
+using Prism.Mvvm;
+using ZbW.Testing.Dms.Client.Repositories;
+
+namespace ZbW.Testing.Dms.Client.ViewModels
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Windows;
-    using Microsoft.Win32;
 
-    using Prism.Commands;
-    using Prism.Mvvm;
-
-    using ZbW.Testing.Dms.Client.Repositories;
 
     internal class DocumentDetailViewModel : BindableBase
     {

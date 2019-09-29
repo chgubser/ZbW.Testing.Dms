@@ -2,11 +2,9 @@
 using System;
 using System.Collections.Generic;
 using ZbW.Testing.Dms.Client.Repositories;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ZbW.Testing.Dms.Client.UnitTest.Services
+
+namespace ZbW.Testing.Dms.Client.UnitTests.Services
 {
     [TestFixture]
     public class ComboBoxItemsTest

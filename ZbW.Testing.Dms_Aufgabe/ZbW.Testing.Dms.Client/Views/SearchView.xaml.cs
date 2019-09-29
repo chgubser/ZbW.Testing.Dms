@@ -1,8 +1,10 @@
-﻿namespace ZbW.Testing.Dms.Client.Views
-{
-    using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
-    using ZbW.Testing.Dms.Client.ViewModels;
+using ZbW.Testing.Dms.Client.ViewModels;
+
+namespace ZbW.Testing.Dms.Client.Views
+{
+
 
     /// <summary>
     /// Interaction logic for SearchView.xaml

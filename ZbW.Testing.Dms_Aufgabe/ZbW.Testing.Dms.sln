@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZbW.Testing.Dms.Client", "ZbW.Testing.Dms.Client\ZbW.Testing.Dms.Client.csproj", "{BAD666D8-64BF-467F-B2E9-6C1DC66D2BEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZbW.Testing.Dms.Client.UnitTest", "..\ZbW.Testing.Dms.Client.UnitTest\ZbW.Testing.Dms.Client.UnitTest.csproj", "{71E086A3-43D2-4B61-93DD-543ADF494111}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZbW.Testing.Dms.Client.UnitTests", "..\ZbW.Testing.Dms.Client.UnitTest\ZbW.Testing.Dms.Client.UnitTests.csproj", "{71E086A3-43D2-4B61-93DD-543ADF494111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

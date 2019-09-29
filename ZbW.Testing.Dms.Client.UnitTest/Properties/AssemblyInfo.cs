@@ -2,11 +2,11 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ZbW.Testing.Dms.Client.UnitTest")]
+[assembly: AssemblyTitle("ZbW.Testing.Dms.Client.UnitTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ZbW.Testing.Dms.Client.UnitTest")]
+[assembly: AssemblyProduct("ZbW.Testing.Dms.Client.UnitTests")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

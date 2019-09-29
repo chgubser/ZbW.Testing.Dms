@@ -1,11 +1,13 @@
-﻿namespace ZbW.Testing.Dms.Client.ViewModels
+﻿using System.Windows.Controls;
+
+using Prism.Commands;
+using Prism.Mvvm;
+
+using ZbW.Testing.Dms.Client.Views;
+
+namespace ZbW.Testing.Dms.Client.ViewModels
 {
-    using System.Windows.Controls;
 
-    using Prism.Commands;
-    using Prism.Mvvm;
-
-    using ZbW.Testing.Dms.Client.Views;
 
     internal class MainViewModel : BindableBase
     {

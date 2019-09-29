@@ -1,13 +1,15 @@
-﻿namespace ZbW.Testing.Dms.Client.ViewModels
-{
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.IO;
-    using Prism.Commands;
-    using Prism.Mvvm;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using Prism.Commands;
+using Prism.Mvvm;
 
-    using ZbW.Testing.Dms.Client.Model;
-    using ZbW.Testing.Dms.Client.Repositories;
+using ZbW.Testing.Dms.Client.Model;
+using ZbW.Testing.Dms.Client.Repositories;
+
+namespace ZbW.Testing.Dms.Client.ViewModels
+{
+
 
     internal class SearchViewModel : BindableBase
     {

@@ -1,9 +1,11 @@
-﻿namespace ZbW.Testing.Dms.Client.Views
-{
-    using System;
-    using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 
-    using ZbW.Testing.Dms.Client.ViewModels;
+using ZbW.Testing.Dms.Client.ViewModels;
+
+namespace ZbW.Testing.Dms.Client.Views
+{
+
 
     /// <summary>
     /// Interaction logic for NewDocumentView.xaml

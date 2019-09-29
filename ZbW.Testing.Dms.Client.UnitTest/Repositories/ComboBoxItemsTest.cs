@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using ZbW.Testing.Dms.Client.Repositories;
 
 
-namespace ZbW.Testing.Dms.Client.UnitTest.Repositories
+namespace ZbW.Testing.Dms.Client.UnitTests.Repositories
 {
     [TestFixture]
     public class ComboBoxItemsTest
