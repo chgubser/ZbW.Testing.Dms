@@ -2,6 +2,7 @@
 using System.IO;
 using System.Xml.Serialization;
 using ZbW.Testing.Dms.Client.Model;
+using System.Configuration;
 
 namespace ZbW.Testing.Dms.Client.Services
 {

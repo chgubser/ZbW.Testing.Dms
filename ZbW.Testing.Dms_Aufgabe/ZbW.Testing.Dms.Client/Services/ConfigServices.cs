@@ -1,6 +1,4 @@
-﻿
-using System.Configuration;
-
+﻿using System.Configuration;
 
 namespace ZbW.Testing.Dms.Client.Services
 {
