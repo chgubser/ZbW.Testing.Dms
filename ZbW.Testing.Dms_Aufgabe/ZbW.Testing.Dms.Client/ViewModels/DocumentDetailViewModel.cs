@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-
+    using System.Windows;
     using Microsoft.Win32;
 
     using Prism.Commands;
@@ -164,9 +164,50 @@
 
         private void OnCmdSpeichern()
         {
-            // TODO: Add your Code here
+            try
+            {
+                if (OnCanSpeichern())
+                {
+                    XmlService.WriteXML(CreateMetadataItem(), _filePath);
+                    if (IsRemoveFileEnabled)
+                    {
+                        File.Delete(_filePath);
+                    }
 
-            _navigateBack();
+                    _navigateBack();
+                }
+                else
+                {
+                    MessageBox.Show("Es müssen alle Pflichtfelder ausgefüllt werden!", "Pflichtfelder ausfüllen");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Speichern fehlgeschlagen: " + ex.Message, "Speichern fehlgeschlagen");
+            }
+
+        }
+
+        private MetadataItem CreateMetadataItem()
+        {
+            MetadataItem metadataItem = new MetadataItem();
+            metadataItem.ValutaDatum = ValutaDatum;
+            metadataItem.Benutzer = Benutzer;
+            metadataItem.Bezeichnung = Bezeichnung;
+            metadataItem.Erfassungsdatum = Erfassungsdatum;
+            metadataItem.IsRemoveFileEnabled = IsRemoveFileEnabled;
+            metadataItem.SelectedTypItem = SelectedTypItem;
+            metadataItem.Stichwoerter = Stichwoerter;
+            return metadataItem;
+        }
+
+        private bool OnCanSpeichern()
+        {
+            return !string.IsNullOrEmpty(_filePath)
+                   && !string.IsNullOrEmpty(Bezeichnung)
+                   && ValutaDatum != null
+                   && !string.IsNullOrEmpty(SelectedTypItem);
         }
     }
+}
 }

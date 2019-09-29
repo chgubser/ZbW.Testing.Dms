@@ -1,7 +1,8 @@
 ﻿namespace ZbW.Testing.Dms.Client.ViewModels
 {
     using System.Collections.Generic;
-
+    using System.Diagnostics;
+    using System.IO;
     using Prism.Commands;
     using Prism.Mvvm;
 
@@ -110,17 +111,51 @@
 
         private void OnCmdOeffnen()
         {
-            // TODO: Add your Code here
+            Process.Start(SelectedMetadataItem.FilePath);
         }
 
         private void OnCmdSuchen()
         {
-            // TODO: Add your Code here
+            List<MetadataItem> items = new List<MetadataItem>();
+            string[] filePaths = Directory.GetFiles(ConfigService.GetConfigValueByKey("RepositoryDir"), "*.xml", SearchOption.AllDirectories);
+
+            string suchbegriff = "";
+            if (Suchbegriff != null)
+            {
+                suchbegriff = Suchbegriff.ToLower();
+            }
+
+            string selectedTypItem = "";
+            if (SelectedTypItem != null)
+            {
+                selectedTypItem = SelectedTypItem.ToLower();
+            }
+
+            // Minimum one search criteria has to be filled
+            if (string.IsNullOrEmpty(suchbegriff) && string.IsNullOrEmpty(selectedTypItem))
+            {
+                return;
+            }
+
+
+            foreach (string filePath in filePaths)
+            {
+                MetadataItem metadataItem = XmlService.ReadXML(filePath);
+                if (metadataItem.SelectedTypItem.ToLower().Contains(selectedTypItem)
+                    && (metadataItem.Bezeichnung.ToLower().Contains(suchbegriff) ||
+                        metadataItem.Stichwoerter.ToLower().Contains(suchbegriff)))
+                {
+                    items.Add(metadataItem);
+                }
+            }
+            FilteredMetadataItems = items;
         }
 
         private void OnCmdReset()
         {
-            // TODO: Add your Code here
+            FilteredMetadataItems = new List<MetadataItem>();
+            SelectedTypItem = null;
+            Suchbegriff = "";
         }
     }
 }
